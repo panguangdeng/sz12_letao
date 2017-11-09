@@ -1,1 +1,130 @@
 @charset "UTF-8";
+*{
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+html,body{
+  height: 100%;
+}
+body{
+  font-family: "微软雅黑";
+  font-size: 16px;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #666;
+}
+a:link,
+a:visited,
+a:hover,
+a:active{
+  text-decoration: none;
+}
+img{
+  vertical-align: middle;
+}
+input{
+  border: none;
+  outline: none;
+}
+.clearfix:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+
+.big_container{
+  height: 100%;
+  .comment{
+    width: 180px;
+    height: 100%;
+    background-color: #222d32;
+    .comment_top{
+      background-color: #367fa9;
+      height: 50px;
+      >a{
+        display: block;
+        line-height: 50px;
+        text-align: center;
+        font-size: 18px;
+        color: #fff;
+        font-weight: 700;
+      }
+    }
+    .comment_user{
+      margin-top: 20px;
+      margin-bottom: 20px;
+      height: 110px;
+      .user_img{
+        width: 40%;
+        height: 100%;
+        text-align: center;
+
+        >img{
+          width: 50px;
+          height: 50px;
+          margin: 30px auto 0;
+          border-radius: 50%;
+        }
+      }
+      .user_name{
+        width: 60%;
+        height: 100%;
+        text-align: left;
+        >a{
+          font-size: 14px;
+          color: #fff;
+
+          display: block;
+          line-height: 110px;
+        }
+      }
+    }
+    .comment_body{
+      background-color: #222d32;
+      >ul{
+        >li{
+          width: 100%;
+          text-align: left;
+          a{
+            font-size: 16px;
+            line-height: 42px;
+            color: #dddddd;
+            display: block;
+            border: 3px solid transparent;
+            padding-left: 30px;
+            >i{
+              margin-right: 10px;
+            }
+            &.active{
+              border-left-color: #069;
+              background-color: #1d1f21;
+              color: #fff;
+            }
+          }
+
+          >.child{
+            >a{
+              padding-left: 55px;
+            }
+          }
+        }
+
+      }
+
+    }
+  }
+  .main_body{
+    overflow: hidden;
+    height: 100%;
+    background-color: pink;
+  }
+
+}
