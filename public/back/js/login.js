@@ -8,10 +8,9 @@ $(function(){
     //2. 用户密码不能为空
     //3. 密码的长度是6-12位
 
-
     //获取表单元素
     var $form = $("form");
-    console.log($form);
+
     //使用表单校验插件
     $form.bootstrapValidator({
         //1. 指定不校验的类型，默认为[':disabled', ':hidden', ':not(:visible)'],可以不设置

@@ -17,7 +17,6 @@ li{
 }
 a{
   text-decoration: none;
-  color: #666;
 }
 a:link,
 a:visited,
@@ -37,15 +36,19 @@ input{
   display: block;
   clear: both;
 }
-
-
-
 .big_container{
   height: 100%;
   .comment{
+    position: absolute;
     width: 180px;
     height: 100%;
     background-color: #222d32;
+    overflow: hidden;
+    left: 0;
+    transition: all 1s;
+    &.active{
+      left: -180px;
+    }
     .comment_top{
       background-color: #367fa9;
       height: 50px;
@@ -118,13 +121,48 @@ input{
         }
 
       }
-
     }
   }
+
   .main_body{
+    margin-left: 180px;
     overflow: hidden;
     height: 100%;
-    background-color: pink;
+    transition: all 1s;
+    &.active{
+      margin-left: 0;
+    }
+    >.main_top{
+      height: 50px;
+      background-color: #3c8dbc;
+      padding: 0 15px;
+      padding-right: 20px;
+      box-sizing: border-box;
+      i{
+        color: #fff;
+        font-size: 20px;
+        line-height: 50px;
+      }
+    }
+    >.container-fluid{
+      >.mianbaoxie{
+        margin: 20px 0;
+      }
+      >.zhuti{
+        >.zhuti_left{
+          width: 50%;
+          height: 500px;
+          box-sizing: border-box;
+        }
+        >.zhuti_right{
+          width: 50%;
+          height: 500px;
+        }
+      }
+    }
+
+
   }
 
 }
+
