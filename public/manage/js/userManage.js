@@ -40,6 +40,8 @@ $(function(){
         var id = $(this).data('id');
         var name = $(this).data('name');
         var isDelete = $(this).hasClass('btn-danger')?0:1;
+        console.log(isDelete)
+        console.log(id)
         /*显示模态框*/
         $('#optionModal').find('strong').html(($(this).hasClass('btn-danger')?'禁用 ':'启用 ')+name);
         $('#optionModal').modal('show');
