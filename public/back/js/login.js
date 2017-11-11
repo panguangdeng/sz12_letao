@@ -22,7 +22,6 @@ $(function(){
             invalid: 'glyphicon glyphicon-remove',
             validating: 'glyphicon glyphicon-refresh'
         },
-
         //3. 指定校验字段
         fields: {
             //校验用户名，对应name表单的name属性

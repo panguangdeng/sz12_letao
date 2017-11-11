@@ -5,7 +5,9 @@
     <title>首页</title>
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"/>
     <link rel="stylesheet" href="lib/nprogress/nprogress.css"/>
+    <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.css"/>
     <link rel="stylesheet/less" href="less/jiben.less"/>
+    <link rel="stylesheet/less" href="less/two.less"/>
     <script src="lib/less/less.js"></script>
     <style>
 
@@ -27,12 +29,12 @@
         </div>
         <div class="comment_body">
             <ul>
-                <li><a href="user.html"><i class="glyphicon glyphicon-user"></i>用户管理</a></li>
+                <li><a class="active" href="#"><i class="glyphicon glyphicon-user"></i>用户管理</a></li>
                 <li>
                     <a class="user_guanli" href="#"><i class="glyphicon glyphicon-list"></i>分类管理</a>
                     <div class="child">
                         <a href="first.html">一级分类</a>
-                        <a class="active" href="two.html">二级分类</a>
+                        <a href="two.html">二级分类</a>
                     </div>
                 </li>
                 <li><a href="shangpin.html"><i class="glyphicon glyphicon-tags"></i>商品管理</a></li>
@@ -44,7 +46,6 @@
             <a class="pull-left top_menu" href="#"><i class="glyphicon glyphicon-align-justify"></i></a>
             <a class="pull-right top_logOut" href="#"><i class="glyphicon glyphicon-log-out"></i></a>
         </div>
-
         <div class="container-fluid">
             <div class="mianbaoxie">
                 <ol class="breadcrumb">
@@ -53,10 +54,38 @@
                     <li class="active">二级分类</li>
                 </ol>
             </div>
+            <div class="addCategory">
+                <button type="button" class="btn btn-default btn-sm two_add">
+                    添加分类
+                </button>
+            </div>
+            <div class="user_main">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <td width="10%">序号</td>
+                        <td width="30%">一级分类名称</td>
+                        <td width="30%">二级分类名称</td>
+                        <td width="30%">二级分类LOGO</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="fenye text-right">
+                    <ul id='bp-element'>
+                        <!-- 挖坑填分页数据 -->
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
+<!--登出模态框-->
 <div class="modal fade" id="modal_loginOut">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
@@ -75,15 +104,88 @@
     </div>
 </div>
 
+<!--添加分类的小模态框-->
+<div class="modal fade" id="two_addCategory">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">添加分类</h4>
+            </div>
+            <div class="modal-body">
+                <form id="add_form">
+                    <div class="form-group">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                <span class="sbb">请选择分类</span>
+                                <span class="caret"></span>
+                                <input id="upLoad_id" name="categoryId" type="text"/>
+                            </button>
+
+                            <ul class="dropdown-menu" id="xialaDown">
+                                <!-- 渲染下拉框数据 -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="brandName" class="form-control" id="add_fenlei" placeholder="请输入分类名">
+                    </div>
+                    <div class="form-group">
+                        <div class="taolu">
+                            <button class="btn btn-default">上传图片</button>
+                            <input name="pic1" id="fileLoad" data-url="/category/addSecondCategoryPic" type="file"/>
+
+                        </div>
+                    </div>
+                    <div class="form-group img_box">
+                        <img src="images/default.png" id="local_img" alt=""/>
+                        <input name="brandLogo" id="upLoad_img2" type="text"/>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default quxiao" data-dismiss="modal">取消</button>
+                <button type="submit" form="add_form" id='gogogo' class="btn btn-primary">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
 <script src="lib/nprogress/nprogress.js"></script>
-<script src="lib/echarts/echarts.min.js"></script>
+<script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
 <script src="lib/template/template-web.js"></script>
+<script src="lib/jquery-fileupload/jquery.ui.widget.js"></script>
+<script src="lib/jquery-fileupload/jquery.fileupload.js"></script>
 <script src="js/jiben.js"></script>
+<script src="js/two.js"></script>
+
 
 </body>
+<script type="text/html" id="two_temp">
+    {{each rows v i}}
+        <tr>
+            <td>{{i+1+(page-1)*size}}</td>
+            <td>{{v.categoryName}}</td>
+            <td>{{v.brandName}}</td>
+            <td><img src="{{v.brandLogo?v.brandLogo:"../images/none.png"}}" alt=""/></td>
+        </tr>
+    {{/each}}
+</script>
+
+
+<script type="text/html" id="twoDown_temp">
+    {{each rows v i}}
+      <li><a data-categoryId="{{v.id}}" href="javascript:;">{{v.categoryName}}</a></li>
+    {{/each}}
+</script>
+
+
+
+
 
 <script>
 
