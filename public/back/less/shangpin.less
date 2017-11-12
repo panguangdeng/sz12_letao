@@ -1,0 +1,70 @@
+.big_container{
+  .main_body{
+    >.container-fluid{
+      >.user_main{
+        height: 100px;
+        >.table-bordered{
+          margin-top: 20px;
+          text-align: center;
+          >thead{
+          }
+          >tbody{
+            >tr{
+              >td{
+                vertical-align: middle !important;
+                >img{
+                  width: 50px;
+                  height: 50px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#dropdownMenu1{
+  border-color: #dddddd;
+  background-color: #fff;
+}
+
+#add_form{
+  .form-group{
+      &:last-of-type{
+        >img{
+          width: 100px;
+          height: 100px;
+        }
+      }
+      &.img_box{
+        height: 100px;
+        >img{
+          margin-right: 5px;
+          border-radius: 5px;
+        }
+      }
+     .taolu{
+      width: 80px;
+      height: 40px;
+      position: relative;
+      &:hover >.btn {
+        background-color: #ccc;
+      }
+      >.btn{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+        color: #333;
+        text-align: center;
+      }
+      >input{
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+    }
+  }
+}
