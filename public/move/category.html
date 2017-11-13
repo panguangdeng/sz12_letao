@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>乐淘移动商城</title>
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css"/>
+    <link rel="stylesheet/less" href="less/jiben.less"/>
+    <link rel="stylesheet/less" href="less/category.less"/>
+    <script src="lib/less/less.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <div class="big_container">
+        <div class="top_content">
+            <a href="javascript:history.go(-1);"><i class="mui-icon mui-icon-arrowleft"></i></a>
+            <h4>乐淘云购</h4>
+            <a href="javascript:;"><i class="fa fa-search"></i></a>
+        </div>
+        <div class="body_content">
+
+            <div class="left_content">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!--这里放置真实显示的DOM内容-->
+                        <ul class="left_ul">
+                            <li class="active"><a href="javascript:;">他妹的牌大神鞋</a></li>
+                            <li><a href="javascript:;">他神鞋</a></li>
+                            <li><a href="javascript:;">他神鞋</a></li>
+                            <li><a href="javascript:;">他神鞋</a></li>
+                            <li><a href="javascript:;">他神鞋</a></li>
+                            <li><a href="javascript:;">他神鞋</a></li>
+                            <li><a href="javascript:;">他神鞋</a></li>
+                            <li><a href="javascript:;">他神鞋</a></li>
+                            <li><a href="javascript:;">他神鞋</a></li>
+                            <li><a href="javascript:;">他神鞋</a></li>
+                            <li><a href="javascript:;">他神鞋</a></li>
+                            <li><a href="javascript:;">他神鞋</a></li>
+                            <li><a href="javascrip  t:;">他神鞋</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right_content">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!--这里放置真实显示的DOM内容-->
+                        <ul class="mui-clearfix right_ul">
+                            <li><a href="#"><img src="images/brand1.png" alt=""/><p>阿迪王</p></a></li>
+                            <li><a href="#"><img src="images/brand1.png" alt=""/><p>阿迪王</p></a></li>
+                            <li><a href="#"><img src="images/brand1.png" alt=""/><p>阿迪王</p></a></li>
+                            <li><a href="#"><img src="images/brand1.png" alt=""/><p>阿迪王</p></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer_content">
+            <ul>
+                <li><a href="index.html"><i class="fa fa-home"></i><p>首页</p></a></li>
+                <li class="active"><a href="category.html"><i class="fa fa fa-bars"></i><p>分类</p></a></li>
+                <li><a href="shopping_car.html"><i class="fa fa fa-shopping-cart"></i><p>购物车</p></a></li>
+                <li><a href="vip.html"><i class="fa fa fa-user"></i><p>会员中心</p></a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/mui/js/mui.min.js"></script>
+    <script src="lib/template/template-web.js"></script>
+    <script src="js/jiben.js"></script>
+    <script src="js/category.js"></script>
+</body>
+<script type="text/html" id="left_temp">
+    {{each rows v i}}
+      <li data-id="{{v.id}}" class="{{i==0?'active':''}}"><a href="javascript:;">{{v.categoryName}}</a></li>
+    {{/each}}
+</script>
+<script type="text/html" id="right_temp">
+    {{if rows.length==0}}
+    <h5>暂时没有更多数据</h5>
+    {{/if}}
+    {{each rows v i}}
+      <li><a href="#"><img src="{{v.brandLogo}}" alt=""/><p>{{v.brandName}}</p></a></li>
+    {{/each}}
+</script>
+<script>
+
+</script>
+</html>

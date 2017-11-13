@@ -39,7 +39,6 @@ $(function () {
 
     //添加按钮点击时再发送请求渲染下拉菜单选项
     $('.two_add').on('click',()=>{
-
         $.ajax({
             url:'/category/queryTopCategoryPaging',
             data:{
@@ -52,6 +51,25 @@ $(function () {
                 $('#xialaDown').html( template('twoDown_temp',back) )
             }
         })
+
+
+    //    ---------------
+        $.ajax({
+            // url:"/category/querySecondCategoryPaging",
+            // url:"/category/queryTopCategoryPaging",
+            url:"/category/queryTopCategoryPaging",
+            data : {
+                page: 1,
+                pageSize: 100
+            },
+            success:function (data) {
+                console.log(data);
+            }
+        })
+
+
+
+
     });
 
     //给下拉菜单添加点击事件,获取下拉列表的值给主按钮

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鏍囬</title>
+    
+</head>
+<body>
+<p>aaaaaaaaaaaaa自己的乐淘aaaa</p>
+</body>
+<script src="lib/jquery/jquery.min.js"></script>
+<script>
+    $.ajax({
+        url:'/category/queryTopCategoryPaging',
+        data:{
+            page:1,
+            pageSize:1
+        },
+        success:function(back){
+            console.log(back);
+            console.log('涓婇潰鐨勬槸涓嬫媺鑿滃崟鐨勯�夐」')
+        }
+    })
+</script>
+</html>

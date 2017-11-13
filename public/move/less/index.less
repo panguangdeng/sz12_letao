@@ -1,0 +1,58 @@
+.big_container{
+  >.body_content{
+    .nav_letao{
+      padding: 10px;
+      >ul{
+        >li{
+          width: 33.33%;
+          float: left;
+          border-radius: 5px;
+          overflow: hidden;
+          >img{
+            width: 100%;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+    .product_list{
+      padding: 10px;
+      >ul{
+        background-color: #fff;
+        >li{
+          width: 48%;
+          float: left;
+          margin-bottom: 10px;
+          border-radius: 10px;
+          overflow: hidden;
+          &:nth-of-type(2n){
+            margin-left: 10px;
+          }
+          >a{
+            width: 100%;
+            height: 100%;
+            display: block;
+            >img{
+              width: 100%;
+              margin: 0 auto;
+            }
+            >p{
+              color: #007aff;
+              text-align: center;
+              font-size: 18px;
+              &:last-of-type{
+                span{
+                  font-size: 14px;
+                  &:last-of-type{
+                    color: orangered;
+                    text-decoration: line-through;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
