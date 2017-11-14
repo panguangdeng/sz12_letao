@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>乐淘移动商城</title>
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css"/>
+    <link rel="stylesheet/less" href="less/jiben.less"/>
+    <link rel="stylesheet/less" href="less/search.less"/>
+    <script src="lib/less/less.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<div class="big_container">
+    <div class="top_content">
+        <a href="javascript:history.go(-1);"><i class="mui-icon mui-icon-arrowleft"></i></a>
+        <h4>搜索中心</h4>
+        <a style="display: none;" href="search.html"><i class="fa fa-search"></i></a>
+    </div>
+    <div class="body_content">
+        <div class="search_title">
+            <form action="" id="search_form">
+                <input class="search_input" placeholder="请输入商品" type="text"/>
+                <a class="search_sure" href="javascript:;">搜索</a>
+            </form>
+
+        </div>
+        <div class="lishi">
+           <div class="chengkai">
+               <div class="mui-scroll-wrapper">
+                   <div class="mui-scroll">
+                       <!--这里放置真实显示的DOM内容-->
+                       <!--<div class="search_UL_title mui-clearfix">-->
+                           <!--<span class="pull-left">搜索历史记录</span>-->
+                           <!--<span class="pull-right remove_local"><i class="fa fa-trash"></i>清空历史记录</span>-->
+                       <!--</div>-->
+                       <!--<ul class="mui-clearfix lt_lishi">-->
+                           <!--&lt;!&ndash;<li><a class="mui-pull-left" href="javascript:;">阿牛哥</a><i class="mui-pull-right mui-icon mui-icon-closeempty"></i></li>&ndash;&gt;-->
+                       <!--</ul>-->
+                   </div>
+               </div>
+           </div>
+        </div>
+    </div>
+    <div class="footer_content">
+        <ul>
+            <li><a href="index.html"><i class="fa fa-home"></i><p>首页</p></a></li>
+            <li><a href="category.html"><i class="fa fa fa-bars"></i><p>分类</p></a></li>
+            <li><a href="shopping_car.html"><i class="fa fa fa-shopping-cart"></i><p>购物车</p></a></li>
+            <li><a href="vip.html"><i class="fa fa fa-user"></i><p>会员中心</p></a></li>
+        </ul>
+    </div>
+</div>
+
+<script type="text/html" id="ltLishi_temp">
+    {{if arr.length==0}}
+        <p>没有更多历史记录</p>
+    {{/if}}
+    {{if arr.length >0}}
+        <div class="search_UL_title mui-clearfix">
+            <span class="pull-left">搜索历史记录</span>
+            <span class="pull-right remove_local"><i class="fa fa-trash"></i>清空历史记录</span>
+        </div>
+        {{each arr v i}}
+            <ul class="mui-clearfix lt_lishi">
+              <li><a class="mui-pull-left" href="search_list.html?key={{v}}">{{v}}</a><i data-text='{{i}}' class="mui-pull-right mui-icon mui-icon-closeempty"></i></li>
+            </ul>
+    {{/each}}
+    {{/if}}
+</script>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/template/template-web.js"></script>
+<script src="js/jiben.js"></script>
+<script src="js/search.js"></script>
+</body>
+
+<script>
+
+</script>
+</html>

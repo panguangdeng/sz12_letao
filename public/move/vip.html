@@ -3,12 +3,12 @@
 <head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-    <title>乐淘移动商城</title>
+    <title>乐淘移动商城-会员中心</title>
     <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="lib/mui/css/mui.min.css"/>
     <link rel="stylesheet/less" href="less/jiben.less"/>
-    <link rel="stylesheet/less" href="less/index.less"/>
+    <link rel="stylesheet/less" href="less/vip.less"/>
     <script src="lib/less/less.js"></script>
     <style>
 
@@ -16,33 +16,60 @@
 </head>
 <body>
 
-    <div class="big_container">
-        <div class="top_content">
-            <a href="javascript:history.go(-1);"><i class="mui-icon mui-icon-arrowleft"></i></a>
-            <h4>乐淘云购</h4>
-            <a href="javascript:;"><i class="fa fa-search"></i></a>
-        </div>
-        <div class="body_content">
-            <div class="mui-scroll-wrapper">
-                <div class="mui-scroll">
-                    <!--这里放置真实显示的DOM内容-->
-
-                </div>
-            </div>
-        </div>
-        <div class="footer_content">
-            <ul>
-                <li><a href="index.html"><i class="fa fa-home"></i><p>首页</p></a></li>
-                <li><a href="category.html"><i class="fa fa fa-bars"></i><p>分类</p></a></li>
-                <li><a href="shopping_car.html"><i class="fa fa fa-shopping-cart"></i><p>购物车</p></a></li>
-                <li class="active"><a href="vip.html"><i class="fa fa fa-user"></i><p>会员中心</p></a></li>
-            </ul>
-        </div>
+<div class="big_container">
+    <div class="top_content">
+        <a href="javascript:history.go(-1);"><i class="mui-icon mui-icon-arrowleft"></i></a>
+        <h4>会员中心</h4>
+        <a href="search.html"><i class="fa fa-search"></i></a>
     </div>
+    <div class="body_content">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell mui-media vip_info">
+                <a href="javascript:;">
+                    <img class="mui-media-object mui-pull-left" src="images/user.jpg">
+                    <div class="mui-media-body">
+                        幸福
+                        <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+                    </div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">账号与安全</a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a href="shopping_car.html" class="mui-navigate-right">我的购物车</a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">收获地址管理</a>
+            </li>
+        </ul>
 
-    <script src="lib/mui/js/mui.min.js"></script>
-    <script src="js/jiben.js"></script>
-    <script src="js/index.js"></script>
+
+    </div>
+    <div class="footer_content">
+        <ul>
+            <li><a href="index.html"><i class="fa fa-home"></i><p>首页</p></a></li>
+            <li><a href="category.html"><i class="fa fa fa-bars"></i><p>分类</p></a></li>
+            <li><a href="shopping_car.html"><i class="fa fa fa-shopping-cart"></i><p>购物车</p></a></li>
+            <li class="active"><a href="vip.html"><i class="fa fa fa-user"></i><p>会员中心</p></a></li>
+        </ul>
+    </div>
+</div>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/template/template-web.js"></script>
+<script src="js/jiben.js"></script>
+<script src="js/vip.js"></script>
+
+<script type="text/html" id="vip_temp">
+    <a href="javascript:;">
+        <img class="mui-media-object mui-pull-left" src="images/user.jpg">
+        <div class="mui-media-body">
+            {{username}}
+            <p class='mui-ellipsis'>{{mobile}}</p>
+        </div>
+    </a>
+</script>
 </body>
 
 <script>

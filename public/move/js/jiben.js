@@ -13,3 +13,16 @@ mui('.mui-scroll-wrapper').scroll({
     bounce: true //是否启用回弹
 });
 
+function getUrl_Obj(num) {
+    var key = window.location.search;
+    key = key.slice(1);
+    key = decodeURI(key);
+    key = key.split('&')
+    var k = key[0].split('=');
+    var obj = {};
+    for(i=0; i<key.length; i++){
+        var k = key[i].split('=')
+        obj[k[0]]=k[1];
+    };
+    return obj[num];
+}

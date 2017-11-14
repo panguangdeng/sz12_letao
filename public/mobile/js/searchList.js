@@ -137,7 +137,6 @@ $(function(){
                         /*可传参 如果传的是true 表示没有更多数据*/
                         that.endPullupToRefresh();
                     },1000);
-
                     /*下一页*/
                     currPage ++;
                     /*开发真实的业务*/

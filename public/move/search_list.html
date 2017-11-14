@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>乐淘移动商城</title>
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css"/>
+    <link rel="stylesheet/less" href="less/jiben.less"/>
+    <link rel="stylesheet/less" href="less/search_list.less"/>
+    <script src="lib/less/less.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<div class="big_container">
+    <div class="top_content">
+        <a href="javascript:history.go(-1);"><i class="mui-icon mui-icon-arrowleft"></i></a>
+        <h4>搜索中心</h4>
+        <a style="display: none;" href="search.html"><i class="fa fa-search"></i></a>
+    </div>
+    <div class="body_content">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="search_title">
+                    <form action="" id="search_form">
+                        <input class="search_input" placeholder="请输入商品" type="text"/>
+                        <a class="search_sure" href="javascript:;">搜索</a>
+                    </form>
+                </div>
+                <div class="product_title">
+                    <a class="active" href="javascript:;">上架时间<i class="fa fa-angle-down"></i></a>
+                    <a data-type="price" href="javascript:;">价格<i class="fa fa-angle-down"></i></a>
+                    <a data-type="num" href="javascript:;">库存<i class="fa fa-angle-down"></i></a>
+                    <a href="javascript:;">折扣<i class="fa fa-angle-down"></i></a>
+                </div>
+                <div class="product_list">
+                    <ul>
+                        <div class="loading"></div>
+                        <!--<li>-->
+                            <!--<a href="#">-->
+                                <!--<img src="images/product.jpg" alt=""/>-->
+                                <!--<p class="mui-ellipsis-2">adidas阿迪达dsdA爱迪生地方撒阿范德萨范德萨范德萨暗室逢灯阿凡达斯场下男士休闲篮球鞋</p>-->
+                                <!--<p>-->
+                                    <!--<span>&yen;556</span>-->
+                                    <!--<span>&yen;666</span>-->
+                                <!--</p>-->
+                                <!--<button class="mui-btn-blue">立即购买</button>-->
+                            <!--</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<a href="#">-->
+                                <!--<img src="images/product.jpg" alt=""/>-->
+                                <!--<p class="mui-ellipsis-2">adidas阿迪达dsdA爱迪生地方撒阿范德萨范德萨范德萨暗室逢灯阿凡达斯场下男士休闲篮球鞋</p>-->
+                                <!--<p>-->
+                                    <!--<span>&yen;556</span>-->
+                                    <!--<span>&yen;666</span>-->
+                                <!--</p>-->
+                            <!--</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<a href="#">-->
+                                <!--<img src="images/product.jpg" alt=""/>-->
+                                <!--<p class="mui-ellipsis-2">adidas阿迪达dsdA爱迪生地方撒阿范德萨范德萨范德萨暗室逢灯阿凡达斯场下男士休闲篮球鞋</p>-->
+                                <!--<p>-->
+                                    <!--<span>&yen;556</span>-->
+                                    <!--<span>&yen;666</span>-->
+                                <!--</p>-->
+                            <!--</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<a href="#">-->
+                                <!--<img src="images/product.jpg" alt=""/>-->
+                                <!--<p class="mui-ellipsis-2">adidas阿迪达dsdA爱迪生地方撒阿范德萨范德萨范德萨暗室逢灯阿凡达斯场下男士休闲篮球鞋</p>-->
+                                <!--<p>-->
+                                    <!--<span>&yen;556</span>-->
+                                    <!--<span>&yen;666</span>-->
+                                <!--</p>-->
+                            <!--</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<a href="#">-->
+                                <!--<img src="images/product.jpg" alt=""/>-->
+                                <!--<p class="mui-ellipsis-2">adidas阿迪达dsdA爱迪生地方撒阿范德萨范德萨范德萨暗室逢灯阿凡达斯场下男士休闲篮球鞋</p>-->
+                                <!--<p>-->
+                                    <!--<span>&yen;556</span>-->
+                                    <!--<span>&yen;666</span>-->
+                                <!--</p>-->
+                            <!--</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<a href="#">-->
+                                <!--<img src="images/product.jpg" alt=""/>-->
+                                <!--<p class="mui-ellipsis-2">adidas阿迪达dsdA爱迪生地方撒阿范德萨范德萨范德萨暗室逢灯阿凡达斯场下男士休闲篮球鞋</p>-->
+                                <!--<p>-->
+                                    <!--<span>&yen;556</span>-->
+                                    <!--<span>&yen;666</span>-->
+                                <!--</p>-->
+                            <!--</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<a href="#">-->
+                                <!--<img src="images/product.jpg" alt=""/>-->
+                                <!--<p class="mui-ellipsis-2">adidas阿迪达dsdA爱迪生地方撒阿范德萨范德萨范德萨暗室逢灯阿凡达斯场下男士休闲篮球鞋</p>-->
+                                <!--<p>-->
+                                    <!--<span>&yen;556</span>-->
+                                    <!--<span>&yen;666</span>-->
+                                <!--</p>-->
+                            <!--</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<a href="#">-->
+                                <!--<img src="images/product.jpg" alt=""/>-->
+                                <!--<p class="mui-ellipsis-2">adidas阿迪达dsdA爱迪生地方撒阿范德萨范德萨范德萨暗室逢灯阿凡达斯场下男士休闲篮球鞋</p>-->
+                                <!--<p>-->
+                                    <!--<span>&yen;556</span>-->
+                                    <!--<span>&yen;666</span>-->
+                                <!--</p>-->
+                            <!--</a>-->
+                        <!--</li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer_content">
+        <ul>
+            <li><a href="index.html"><i class="fa fa-home"></i><p>首页</p></a></li>
+            <li><a href="category.html"><i class="fa fa fa-bars"></i><p>分类</p></a></li>
+            <li><a href="shopping_car.html"><i class="fa fa fa-shopping-cart"></i><p>购物车</p></a></li>
+            <li><a href="vip.html"><i class="fa fa fa-user"></i><p>会员中心</p></a></li>
+        </ul>
+    </div>
+</div>
+
+<script type="text/html" id="search_list_temp">
+    {{if data.length==0}}
+        <h5>没有更多数据</h5>
+    {{else}}
+        {{each data v i}}
+            <li>
+                <a href="product_info.html?id={{v.id}}">
+                    <img src="{{v.pic[0].picAddr}}" alt=""/>
+                    <p class="mui-ellipsis-2">{{v.proDesc}}</p>
+                    <p>
+                        <span>&yen;{{v.price}}</span>
+                        <span>&yen;{{v.oldPrice}}</span>
+                    </p>
+                    <button class="mui-btn-blue">立即购买</button>
+                </a>
+            </li>
+        {{/each}}
+    {{/if}}
+</script>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/template/template-web.js"></script>
+<script src="js/jiben.js"></script>
+<script src="js/search_list.js"></script>
+</body>
+
+<script>
+
+</script>
+</html>
