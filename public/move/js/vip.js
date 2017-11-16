@@ -10,11 +10,25 @@ $(function () {
         type:'get',
         success:(back)=>{
             console.log(back);
-            $('.vip_info').html(template('vip_temp',back))
+            var html = template('vip_temp',back);
+            console.log(html);
+            $('.vip_info').html( html )
         }
     })
 
-
+    $('.logOut a').on('click', function () {
+        console.log('a点击点击更健康');
+        $.ajax({
+            url:"/user/logout",
+            success:(back)=>{
+                console.log(back);
+                mui.toast('恭喜你退出成功')
+                setTimeout(function () {
+                    window.location.href = 'move_login.html';
+                },1000)
+            }
+        })
+    })
 
 
 

@@ -35,7 +35,6 @@ $(function () {
             },
             success:(back)=>{
                 console.log(back);
-
                 if(back.success){
                     if(url){
                         console.log('url有值')
@@ -59,6 +58,8 @@ $(function () {
         })
     })
 
-
+    $('.new_user').on('click',function () {
+        console.log('点击了注册按钮');
+    });
 
 })

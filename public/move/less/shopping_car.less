@@ -1,0 +1,112 @@
+.big_container{
+  padding-bottom: 80px;
+  .body_content{
+    background-color: #fff;
+    >.mui-scroll-wrapper{
+      .car_list{
+        >li{
+          border-bottom: 1px solid #ccc;
+          .mui-table-cell{
+            display: block;
+            width: 100%;
+            .ck{
+              position: absolute;
+              left: 5px;
+              bottom: 5px;
+            }
+            .cart_left{
+              float: left;
+              >img{
+                width: 60px;
+                height: 60px;
+              }
+            }
+            .cart_right{
+              overflow: hidden;
+              padding-left: 10px;
+              .mui-ellipsis-2{
+                height: 42px;
+                color: black;
+              }
+              >.price_wrap{
+                .price{
+                  color: red;
+                  font-size: 14px;
+                }
+                .oldPrice{
+                  color: #cccccc;
+                  font-size: 12px;
+                  text-decoration: line-through;
+                }
+                .num{
+                  float: right;
+                  margin-right: 20px;
+                  color: #069;
+                }
+              }
+              >.size{
+                color: #069;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+  .all_dingdan{
+    background-color: #cccccc;
+    padding-left: 10px;
+    z-index: 999;
+    height: 30px;
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    >.info{
+      line-height: 30px;
+      >.all{
+        color: red;
+        line-height: 30px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      >.yen{
+        font-size: 14px;
+        color: #cccccc;
+        line-height: 30px;
+        color: red;
+      }
+      >.price_num{
+        font-size: 14px;
+        color: #cccccc;
+        line-height: 30px;
+        color: red;
+      }
+    }
+    >.tijiao{
+      line-height: 30px;
+      height: 30px;
+      padding: 0 10px;
+      background-color: red;
+      color: #fff;
+      border-radius: 5px;
+    }
+  }
+
+}
+
+.shopping_car_size{
+  padding-bottom: 10px;
+  >span{
+    border: 1px solid #cccccc;
+    font-size: 12px;
+    line-height: 30px;
+    padding: 5px;
+    color: black;
+    &.active{
+      background-color: darkorange;
+      color: #fff;
+    }
+  }
+
+}

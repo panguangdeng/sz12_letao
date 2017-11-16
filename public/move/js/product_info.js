@@ -16,7 +16,9 @@ $(function () {
             mui('.mui-numbox').numbox();
             //获得slider插件对象
             var gallery = mui('.mui-slider');
-            gallery.slider();
+            mui('.mui-slider').slider({
+                interval:1000//自动轮播周期，若为0则不自动播放，默认为0；
+            });
         }
     });
 
@@ -26,6 +28,8 @@ $(function () {
         size = $(this).text();
         $(this).addClass('active').siblings().removeClass('active');
     });
+
+
 
     $('.mui-btn-danger').on('click', function () {
         //console.log('点击了加入购物车');
@@ -46,7 +50,11 @@ $(function () {
                 success:(back)=>{
                     console.log(back);
                     if(back.success){
-                        mui.toast('添加购物车成功')
+                        mui.confirm('添加成功,是否去我的购物车查看','不温馨的提示',['确定','取消'],function(i){
+                            if(i.index==0){
+                                window.location.href = 'shopping_car.html';
+                            };
+                        })
                     }
                     if(back.error){
                         mui.confirm('你还没登录','不温馨的提示',['确定','取消'],function(i){
@@ -56,7 +64,6 @@ $(function () {
                                 //console.log('move_login.html?url_key='+window.location.href)
                                 window.location.href = 'move_login.html?url_key='+window.location.href;
                             }
-
                         })
                     }
                 }

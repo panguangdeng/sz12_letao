@@ -26,10 +26,44 @@
         <div class="mui-scroll-wrapper">
             <div class="mui-scroll">
                 <!--这里放置真实显示的DOM内容-->
-
+               <ul class="car_list">
+                   <li class="mui-table-view-cell lt_item mui-transitioning">
+                       <div class="mui-slider-right mui-disabled">
+                           <a class="btn_edit_cart mui-btn mui-btn-blue mui-icon mui-icon-compose" data-id="3" data-num="4" data-productnum="20" data-size="40" data-productsize="30-50" style="transform: translate(0px, 0px);"></a>
+                           <a data-id="3" class="btn_delete_cart mui-btn mui-btn-red mui-icon mui-icon-trash" style="transform: translate(-90px, 0px);"></a>
+                       </div>
+                       <div class="mui-slider-handle" style="transform: translate(0px, 0px);">
+                           <div class="mui-table-cell">
+                               <input type="checkbox" class="ck" data-price="499.1" data-num="4">
+                               <div class="cart_left">
+                                   <img src="/mobile/images/detail.jpg" alt="">
+                               </div>
+                               <div class="cart_right">
+                                   <p class="mui-ellipsis-2 proName">飓风飓风更健康Sport飓风 Nike Kwazi 休闲休闲更健康休闲休闲更健康休闲运动鞋男 844839-002-001-100-400</p>
+                                   <p class="price_wrap">
+                                       <span class="price">¥499.1</span>
+                                       <span class="oldPrice">¥888.1</span>
+                                       <span class="num">4双</span>
+                                   </p>
+                                   <p class="size">
+                                       鞋码：40
+                                   </p>
+                               </div>
+                           </div>
+                       </div>
+                   </li>
+               </ul>
             </div>
         </div>
 
+    </div>
+    <div class="all_dingdan">
+        <div class="info mui-pull-left">
+            <span class="all">订单总金额:</span>
+            <span class="yen">&yen;</span>
+            <span class="price_num">00.00</span>
+        </div>
+        <a class="mui-pull-right tijiao" href="javascript:;">提交订单</a>
     </div>
     <div class="footer_content">
         <ul>
@@ -47,7 +81,61 @@
 <script src="js/jiben.js"></script>
 <script src="js/shopping_car.js"></script>
 </body>
+<script type="text/html" id="shopping_cart_temp">
+    {{each data v i}}
+    <li class="mui-table-view-cell lt_item mui-transitioning">
+        <div class="mui-slider-right mui-disabled">
+            <a class="btn_edit_cart mui-btn mui-btn-blue mui-icon mui-icon-compose"
+               data-id="{{v.id}}"
+               data-size="{{v.size}}"
+               data-num="{{v.num}}"
+               data-productNum="{{v.productNum}}"
+               data-productsize="{{v.productSize}}"
+            ></a>
+            <a data-id="{{v.id}}" class="btn_delete_cart mui-btn mui-btn-red mui-icon mui-icon-trash"></a>
+        </div>
+        <div class="mui-slider-handle">
+            <div class="mui-table-cell">
+                <input type="checkbox" class="ck" data-price="{{v.price}}" data-num="{{v.num}}">
+                <div class="cart_left">
+                    <img src="/mobile/images/detail.jpg" alt="">
+                </div>
+                <div class="cart_right">
+                    <p class="mui-ellipsis-2 proName">{{v.proName}}</p>
+                    <p class="price_wrap">
+                        <span class="price">¥{{v.price}}</span>
+                        <span class="oldPrice">¥{{v.oldPrice}}</span>
+                        <span class="num">购买数量:{{v.num}}</span>
+                    </p>
+                    <p class="size">
+                        鞋码：{{v.size}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</script>
+<script type="text/html" id="edit_car_temp">
 
+    <div class="lie shopping_car_size mui-text-left">
+        尺码:
+        <%
+            var tem = productsize.split('-')
+            for(var i=tem[0];i<=tem[1];i++){
+        %>
+        <span class="{{i==size?'active':''}}"><%= i %></span>
+        <% } %>
+    </div>
+    <div class="lit shopping_car_numBox mui-text-left">
+        数量
+        <div class="mui-numbox" data-numbox-step='1' data-numbox-min='1' data-numbox-max='{{productnum}}'>
+            <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+            <input class="mui-numbox-input" value="{{num}}" type="number" />
+            <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+        </div>
+    </div>
+</script>
 <script>
 
 </script>

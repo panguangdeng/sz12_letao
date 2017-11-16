@@ -91,6 +91,22 @@
 
 </body>
 <script>
+    function a(xx) {
+        this.x = xx;
+        return this
+    };
 
+    var x = a(5);
+    console.log(x);
+    console.log('上面的是X');
+//    var bb = 0;
+    var y = a(6);
+    console.log(y);
+    console.log('上面的是Y');
+
+    console.log(x.x);
+    console.log('上面的是x.x');
+//    console.log(x)
+    console.log(y.x);
 </script>
 </html>
